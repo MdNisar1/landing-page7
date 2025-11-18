@@ -1,0 +1,56 @@
+* {
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.nav-links {
+display: flex;
+gap: 20px;
+}
+.nav-links a {
+text-decoration: none;
+font-weight: bold;
+color: #333;
+}
+.hero {
+height: 90vh;
+background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') center/cover;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: #fff;
+text-shadow: 2px 2px 5px #000;
+}
+.hero button {
+padding: 12px 25px;
+font-size: 18px;
+border: none;
+margin-top: 15px;
+cursor: pointer;
+background: #ff9800;
+color: #fff;
+border-radius: 5px;
+}
+.destinations, .packages {
+padding: 50px;
+text-align: center;
+}
+.dest-grid {
+margin-top: 30px;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+gap: 20px;
+}
+.card {
+background: #fff;
+padding: 40px;
+border-radius: 10px;
+box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+font-size: 22px;
+font-weight: bold;
+}
+footer {
+background: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
+}
