@@ -1,9 +1,24 @@
 * {
 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+.logo{
+font-size: 24px;
+font-weight: bold;
+padding: 10px 20px;
+}
+nav{
+background-color: #aed5f5;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
 .nav-links {
+    padding: 0 20px;
 display: flex;
 gap: 20px;
+justify-content: center;
+/* background-color: rgb(7, 96, 125); */
+list-style: none;
 }
 .nav-links a {
 text-decoration: none;
@@ -31,23 +46,83 @@ color: #fff;
 border-radius: 5px;
 }
 .destinations, .packages {
-padding: 50px;
-text-align: center;
+  padding: 50px;
+  text-align: center;
 }
+
 .dest-grid {
-margin-top: 30px;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-gap: 20px;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
 }
+
+/* ----- CARD WITH IMAGE ----- */
 .card {
-background: #fff;
-padding: 40px;
-border-radius: 10px;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-font-size: 22px;
-font-weight: bold;
+  height: 180px;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #black;
+
+  /* image styling */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: 0.3s ease;
 }
+
+/* dark overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.35);
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.card:hover::before {
+  background: rgba(0,0,0,0.15);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* text above overlay */
+.card {
+  z-index: 1;
+}
+
+/* ----- 100% working image URLs ----- */
+
+.card:nth-child(1) {
+  background-image: url("https://images.pexels.com/photos/3601424/pexels-photo-3601424.jpeg?auto=compress&cs=tinysrgb&w=800"); /* Bali */
+}
+
+.card:nth-child(2) {
+  background-image: url("https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg?auto=compress&cs=tinysrgb&w=800"); /* Paris */
+}
+
+.card:nth-child(3) {
+  background-image: url("https://images.pexels.com/photos/168927/pexels-photo-168927.jpeg?auto=compress&cs=tinysrgb&w=800"); /* Dubai */
+}
+
+.card:nth-child(4) {
+  background-image: url("https://images.pexels.com/photos/3601426/pexels-photo-3601426.jpeg?auto=compress&cs=tinysrgb&w=800"); /* Maldives */
+}
+
+
 footer {
 background: #333;
 color: #fff;
